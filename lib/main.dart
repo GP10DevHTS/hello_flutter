@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'posts_page.dart'; // make sure this path is correct
+import 'create_post_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -42,6 +43,16 @@ class HomePage extends StatelessWidget {
                 );
               },
               child: const Text('Go to Posts'),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const CreatePostPage()),
+                );
+              },
+              child: const Text('Create a Post'),
             ),
           ],
         ),
